@@ -1,0 +1,73 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            
+                        </ol>
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card l-bg-blue-dark text-white mb-4">
+                                    <div class="card-body">Total Applications: 100</div>
+                                    </div> 
+                                </div>
+                            
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card l-bg-green-dark text-white mb-4">
+                                    <div class="card-body">Booked Deals: 50</div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card l-bg-cherry text-white mb-4">
+                                    <div class="card-body">Declines: 50</div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                My Applications
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Application Number</th>
+                                            <th>Name</th>
+                                            <th>Vehicle</th>
+                                            <th>Status</th>
+                                            <th>Down Payment</th>
+                                            <th>Application date</th>
+                                            <th>Monthly Salary</th>
+                                            <th>Dealer Proceeds</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr onclick="window.location='{% url 'profile'  %}'">
+                                            <td>1000123456</td>
+                                            <td>Car Buyer</td>
+                                            <td>2012 Honda Civic</td>
+                                            <td>Approved</td>
+                                            <td>$1500</td>
+                                            <td>09/16/2022</td>
+                                            <td>$2500</td>
+                                            <td>$6500</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+{% endblock %}
+
